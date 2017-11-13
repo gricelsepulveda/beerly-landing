@@ -149,22 +149,33 @@ nav.brly-top-nav {
     @include brly-flex-row;
     @include brly-animate;
     margin-right: 20px;
+    position: relative;
     &:hover, &:active, &:focus, &:visited {
       background: transparent;
       color: $color-1;
       margin-right: 20px;
-      span.fa, span.text {
+      span.fa.fa-user-o, span.brly-text {
         color: $color-1;
       }
-      span.fa {
+      span.fa.fa-user-o{
         border: 1px solid $color-1;
+        color: $color-1;
+      }
+      span.fa.fa-sort-down {
+        color: $color-1;
+      }
+      ul.brly-logged-options{
+        &.active {
+          display: inherit!important;
+          display: flex!important;
+        }
       }
     }  
     span {
       display: inline-block;
     }
     //ICON LOGIN
-    span.fa {
+    span.fa.fa-user-o {
       color: $white;
       margin-right: 10px;
       font-size: 13px;
@@ -174,6 +185,18 @@ nav.brly-top-nav {
       width: 16px;
       height: 16px;
       border-radius: 20px;
+      @include brly-flex-row;
+    }
+    //ICON LOGIN
+    span.fa.fa-sort-down {
+      color: $white;
+      margin-left: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 2px;
+      width: 16px;
+      height: 16px;
+      margin-top: -10px;
       @include brly-flex-row;
     }
     //TEXT LOGIN
@@ -188,6 +211,61 @@ nav.brly-top-nav {
         transform: uppercase;
       }
       color: $white;
+    }
+    //LOGEED MENU
+    ul.brly-logged-options {
+      @include brly-flex-col;
+      @include brly-cero;
+      align-items: flex-start;
+      padding: 5px 10px 5px 10px;
+      position: absolute;
+      right: 0px;
+      top: 20px;
+      background-color: $black;
+      border-radius: 0px 0px 4px 4px;
+      width: 100px;
+      display: none!important;
+      li.brly-logged-option-li {
+        @include brly-flex-row;
+        justify-content: flex-end;
+        @include brly-cero;
+        height: 28px;
+        border-bottom: 1px solid rgba($white, 0.2);
+        width: 100%;
+        color: $white;
+        &:last-of-type {
+          border-bottom: 0px;
+        }
+        a {
+          @include brly-cero;
+          @include brly-clean-ahref;
+          @include brly-flex-row;
+          justify-content: flex-end;
+          font: {
+            family: 'mukta malar', sans-serif;
+            size: 13px;
+          }
+          height: 100%;
+          width: 100%;
+          text-align: right;
+          color: $white;
+          cursor: pointer;
+          span {
+            font-size: 16px;
+            margin-left: 10px;
+            color: $white;
+          }
+        }
+        @include brly-animate;
+        &:hover {
+          a {
+            color: $color-1;
+            span {
+              color: $color-1;
+            }
+          }
+        }
+      }
     }
   }
   //START SUSCRIPTION BUTTON
