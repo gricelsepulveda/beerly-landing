@@ -1,0 +1,1018 @@
+@import 'brly-mixins';
+
+//AUX
+html {
+  @include brly-cero;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-x: hidden; 
+}
+
+body {
+  @include brly-cero;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h3.brly-promo-nav {
+  height: 28px;
+  width: 100%;
+  @include brly-flex-row;
+  @include brly-cero;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: lighten($color-1, 15%);
+  font-family: 'mukta malar', sans-serif;
+  text: {
+    transform: uppercase;
+    align: center;
+  }
+  span.text-1 {
+    font-weight: 300;
+    font-size: 14px;
+    color: $black;
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+  span.text-2 {
+    font-weight: 300;
+    font-size: 20px;
+    color: $black;
+    margin-right: 10px;
+    margin-top: 0px;
+  }
+  span.text-3 {
+    font-weight: 500;
+    font-size: 16px;
+    color: $black;
+    margin-right: 6px;
+    margin-top: 4px;
+  }
+  span.text-4 {
+    font-weight: 800;
+    font-size: 20px;
+    color: $black;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    letter-spacing: 2px;
+  }
+  span.text-5 {
+    font-weight: 600;
+    font-size: 18px;
+    color: $color-2;
+    margin-bottom: 2px;
+    margin-top: 4px;
+  }
+}
+
+nav.brly-top-nav {
+  height: 100px;
+  background: $black;
+  background-color: $black;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include brly-flex-row;
+  @include brly-dark-shadow;
+  justify-content: space-between;
+  position: fixed;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+  //LOGO BEERLY
+  figure.brly-logo {
+    height: 70px;
+    width: auto;
+    .brly-logotipo {
+      height: 70px;
+      width: auto;
+    }
+    .brly-isotipo{
+      height: 40px;
+      width: auto;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  //MAIN MENU
+  ul.brly-main-menu {
+    @include brly-clean-list;
+    @include brly-cero;
+    @include brly-clean-webkit;
+    @include brly-flex-row;
+    justify-content: flex-start;
+    //MENU OPTIONS
+    li {
+      @include brly-clean-list;
+      @include brly-cero;
+      @include brly-clean-webkit;
+      margin-right: 20px!important;
+      a {
+        @include brly-clean-ahref;
+        display: inline-block;
+        cursor: pointer;
+        color: $white;
+        height: auto;
+        font: {
+          size: 14px;
+          family: 'mukta malar', sans-serif;
+          weight: 300;
+        }
+        text: {
+          align: left;
+          transform: uppercase;
+        }
+        @include brly-animate;
+        margin-top: 20px;
+        &:hover, &.active, &:focus, &:visited {
+          color: $color-1;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  //LOGIN BUTTON
+  button.brly-login-button {
+    background: transparent;
+    @include brly-cero;
+    @include brly-clean-ahref;
+    cursor: pointer;
+    @include brly-flex-row;
+    @include brly-animate;
+    margin-right: 20px;
+    &:hover, &:active, &:focus, &:visited {
+      background: transparent;
+      color: $color-1;
+      margin-right: 20px;
+      span.fa, span.text {
+        color: $color-1;
+      }
+      span.fa {
+        border: 1px solid $color-1;
+      }
+    }  
+    span {
+      display: inline-block;
+    }
+    //ICON LOGIN
+    span.fa {
+      color: $white;
+      margin-right: 10px;
+      font-size: 13px;
+      font-weight: 400;
+      border: 1px solid $white;
+      padding: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 20px;
+      @include brly-flex-row;
+    }
+    //TEXT LOGIN
+    span.brly-text {
+      font: {
+        size: 16px;
+        family: 'mukta malar', sans-serif;
+        weight: 300;
+      }
+      text: {
+        align: left;
+        transform: uppercase;
+      }
+      color: $white;
+    }
+  }
+  //START SUSCRIPTION BUTTON
+  .brly-suscription-button-nav {
+    background: $color-1;
+    @include brly-cero;
+    @include brly-clean-ahref;
+    cursor: pointer;
+    @include brly-flex-row;
+    @include brly-animate;
+    color: $white;
+    border: 1px solid $color-1;
+    border-radius: 2px;
+    height: 48px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    font: {
+      family: 'mukta malar', sans-serif;
+      size: 18px;
+      weight: 600;
+    }
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    &:hover, &:active, &:focus, &:visited {
+      background: lighten($color-1, 10%);
+      color: $white;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: 1px solid $color-1;
+      border-radius: 2px;
+    }  
+  }
+}
+
+//USABLE BODY
+.brly-main-wrapper {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 0px 0px 00px 0px;
+  position: relative;
+  margin-top: 128px;
+  min-height: 100vh;
+  background: {
+    image: url('../../common/assets/img/body-background.jpg');
+    repeat: repeat;
+    position: center;
+  }
+}
+
+//FIRST STATIC SLIDER
+section.brly-static-slider {
+  width: 100%;
+  height: 400px;
+  background: {
+    color: darken($white, 5%);
+    image: url('../../common/assets/img/sliders/cover-landing-v00.jpg');
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  display: inline-block;
+  position: relative;
+  //PROMOTIONAL TEXTS
+  article.brly-promo-text{
+    height: 400px;
+    width: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 80px;
+    top: 0px;
+    background: rgba($black, 0.25);
+    @include brly-flex-col;
+    h1.brly-promo-text-h1, p.brly-promo-text-p {
+      @include brly-cero;
+      font-family: 'mukta malar', sans-serif;
+      color: $white; 
+    }
+    h1.brly-promo-text-h1 {
+      font: {
+        size: 48px;
+        weight: 800;
+      }
+      text: {
+        transform: uppercase;
+        align: center;
+      }
+      margin-bottom: 5px;
+    }
+    p.brly-promo-text-p {
+      font: {
+        size: 24px;
+        weight: 300;
+      }
+      text: {
+        align: center;
+      }
+    }
+    button.brly-suscription-slider-button-promo {
+      background: $color-4;
+      @include brly-cero;
+      @include brly-clean-ahref;
+      cursor: pointer;
+      @include brly-flex-row;
+      @include brly-animate;
+      color: $white;
+      border-radius: 48px;
+      height: 48px;
+      width: auto;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font: {
+        family: 'mukta malar', sans-serif;
+        size: 18px;
+        weight: 600;
+      }
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      &:hover, &:active, &:focus, &:visited {
+        background: lighten($color-4, 10%);
+        color: $white;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 48px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+    span.brly-suscription-slider-note-1,
+    span.brly-suscription-slider-price,
+    span.brly-suscription-slider-note-2,
+    span.brly-suscription-slider-note-3 {
+      font: {
+        family: 'mukta malar', sans-serif;
+        weight: 200;
+      }
+      color: $white;
+      text-align: center;
+    }
+    span.brly-suscription-slider-price {
+      padding: 10px;
+      border-top: 1px solid $white;
+      border-bottom: 1px solid $white;
+      margin-bottom: 5px;
+      font-size: 32px;
+      font-weight: 400;
+    }
+    span.brly-suscription-slider-note-1 {
+      margin-bottom: 5px;
+    }
+    span.brly-suscription-slider-note-1, span.brly-suscription-slider-note-2 {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    span.brly-suscription-slider-note-3 {
+      font-size: 13px;
+    }
+  }
+}
+
+// INCLUDES BANNER
+
+section.brly-includes-slider {
+  @include brly-flex-row;
+  font-family: 'mukta malar', sans-serif;
+  color: $white;
+  background-color: $color-2;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px 40px 20px 40px;
+  h2.brly-includes-h2 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    max-width: 300px;
+    margin-right: 40px;
+  }
+  .span.fa {
+    font-size: 18px;
+    display: inline-block;
+  }
+  .revert {
+    transform: rotate(90deg);
+    font-size: 12px;
+    margin-right: 20px;
+  }
+  article.brly-includes-article {
+    margin-right: 10px;
+    margin-left: 10px;
+    @include brly-flex-col;
+    &:first-of-type {
+      margin-left: 0px;
+    }
+    &:last-of-type {
+      margin-right: 0px;
+    }
+    figure.brly-includes-fig {
+      width: 50px;
+    }
+    p.brly-includes-p {
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      display: block;
+      max-width: 150px;
+    }
+  }
+  span.brly-includes-price {
+    margin-bottom: 0px;
+    font-size: 38px;
+    font-weight: 600;
+  }
+  span.brly-includes-note {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
+section.brly-how {
+  font-family: 'mukta malar', sans-serif;
+  color: $black;
+  background-color: $white;
+  padding: 0px 20px 0px 20px;
+  box-sizing: border-box;
+  margin: 0px 40px 20px 40px;
+  position: relative;
+  @include brly-flex-col; 
+  .brly-line {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+    border-right: 1px dashed $color-1;
+    z-index: 1;
+  }
+  .brly-line-2 {
+    position: absolute;
+    top: calc(50% + 75px);
+    width: 50%;
+    height: 1px;
+    border-top: 1px dashed $color-1;
+    z-index: 1;
+  }
+  .brly-divisor {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: $white;
+    z-index: 2;
+  }
+  .brly-arrow-next {
+    width: 25px;
+    height: 25px;
+    background: {
+      image: url(../../common/assets/img/includes/next.svg);
+      position: center;
+      repeat: no-repeat;
+    }
+    position: absolute;
+    &.brly-arrow-next-1{
+      left: calc(50% - 10px);
+      top: 25%;
+      z-index: 2;
+      transform: rotate(22.5deg);
+    }
+    &.brly-arrow-next-2{
+      left: calc( 50% - 10px);
+      top: 56%;
+      z-index: 2;
+      transform: rotate(140deg);
+    }
+    &.brly-arrow-next-3{
+      left: calc(50% - 6px);
+      bottom: 32%;
+      z-index: 2;
+      transform: rotate(45deg);
+    }
+  }
+  h2.brly-how-h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    display: block;
+    background-color: $white;
+    z-index: 2;
+  }
+  p.brly-how-p {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 20px;
+    display: block;
+    background-color: $white;
+    z-index: 2;
+  }
+  .flex-row {
+    article.brly-how-article {
+      width: 100%;
+      display: block;
+      margin: 10px 10px 10px 10px;
+      @include brly-flex-col;
+      span.brly-how-article-note {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 0px;
+        border-radius: 20px;
+        height: 20px;
+        width: 20px;
+        background-color: $color-1;
+        color: $black;
+        margin-top: 24px;
+      }
+      h3.brly-how-article-h3 {
+        font-size: 21px;
+        font-weight: 500;
+        text-align: left;
+        text-transform: uppercase;
+        max-width: 200px;
+        margin-bottom: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      p.brly-how-article-p {
+        max-width: 300px;
+      }
+      figure.brly-how-article-img {
+        img {
+          width: auto;
+          height: 150px;
+        }
+      }
+      &.brly-how-article-1{
+        align-items: flex-end;
+        padding-right: 40px;
+        h3.brly-how-article-h3, p.brly-how-article-p {
+          text-align: right;
+        }
+      }
+      &.brly-how-article-2{
+        align-items: flex-start;
+        margin-top: 150px;
+        padding-left: 40px;
+        h3.brly-how-article-h3, p.brly-how-article-p {
+          text-align: left;
+        }
+        figure.brly-how-article-img {
+          img {
+            height: 100px;
+          }
+        }
+      }
+      &.brly-how-article-3{
+        align-items: flex-end;
+        padding-right: 40px;
+        h3.brly-how-article-h3, p.brly-how-article-p {
+          text-align: right;
+        }
+      }
+      &.brly-how-article-4{
+        align-items: flex-start;
+        margin-top: 150px;
+        padding-left: 40px;
+        h3.brly-how-article-h3, p.brly-how-article-p {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+//RE PROMOTION
+
+section.brly-re-promo {
+  @include brly-flex-row;
+  font-family: 'mukta malar', sans-serif;
+  background-color: $color-2;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 10px 40px 10px 40px;
+  p.brly-re-promo {
+    @include brly-cero;
+    color: $white;
+    display: block;
+    font: {
+      size: 24px;
+      weight: 500;
+    }
+    text: { 
+      align: center;
+      transform: uppercase;
+    }
+    span.brly-re-promo-price {
+      font: {
+        weight: 800;
+        size: 32px;
+      }
+    }
+    span.brly-re-promo-note {
+      font-weight: 300;
+    }
+    button.brly-re-promo-button{
+      background: $white;
+      @include brly-cero;
+      @include brly-clean-ahref;
+      cursor: pointer;
+      display: inline-block;
+      @include brly-animate;
+      color: $black;
+      border-radius: 48px;
+      height: 48px;
+      width: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      font: {
+        family: 'mukta malar', sans-serif;
+        size: 24px;
+        weight: 600;
+      }
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      &:hover, &:active, &:focus, &:visited {
+        text-decoration: underline;
+        color: $black;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 48px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+//WHY
+section.brly-why{
+  font-family: 'mukta malar', sans-serif;
+  color: $black;
+  background-color: $white;
+  padding: 0px 20px 40px 20px;
+  box-sizing: border-box;
+  margin: 0px 40px 20px 40px;
+  position: relative;
+  @include brly-flex-col;
+  h2.brly-why-h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    display: block;
+    background-color: $white;
+    z-index: 2;
+  }
+  p.brly-why-p {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 20px;
+    display: block;
+    background-color: $white;
+    z-index: 2;
+  }
+  article.brly-why-article {
+    max-width: 200px;
+    padding: 20px 40px 20px 40px;
+    @include brly-flex-col;
+    figure.figure-brly-why-article {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      position: relative;
+      @include brly-flex-row;
+      img {
+        width: 60%;
+        height: auto;
+      }
+    }
+    p.brly-how-article-p {
+      margin-top: 0px;
+      font-size: 16px;
+      font-weight: 300;
+      text-align: center;
+      display: block;
+    }
+  }
+  .flex-row {
+    justify-content: flex-start;
+    align-items: flex-start;
+    article.brly-why-kit-article {
+      width: 100%;
+      .flex-row {
+        figure.brly-why-kit-figure-big {
+          img {
+            height: 100px;
+            margin-top: 80px;
+          }
+        }
+        .flex-column.brly-why-kit-first-box {
+          align-items: flex-start;
+          align-content: flex-end;
+          p.brly-why-kit-p{
+            display: block;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: left;
+            display: block;
+            &:last-of-type {
+              margin-top: 0px;
+              font-weight: 300;
+            }
+          }
+          .brly-why-kit-drinks {
+            max-width: 150px;
+            img {
+              width: 20px;
+              height: auto;
+              margin: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+p.brly-why-kit-p2{
+  display: block;
+  margin-top: 0px;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: left;
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  &:last-of-type{
+    margin-top: 20px;
+  }
+  span.fa.fa-angle-right {
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $white;
+    border-radius: 20px;
+    display: inline-block;
+    background-color: $color-1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    @include brly-flex-row;
+  }
+}
+
+// BEERLY ANIMATE 
+
+section.brly-banner-animate {
+  width: 100%;
+  height: 400px;
+  background-color: darken($white, 5%);
+  display: block;
+  position: relative;
+  //INDICATORS
+  .bannerIndicators{
+    position: absolute;
+    right: calc(50% - 77px);
+    .bannerIndicator {
+      background-color: $color-1;
+      color: $color-1;
+      background: $color-1;
+      @include brly-animate;
+      &.current {
+        background-color: $color-2;
+        color: $color-2;
+        background: $color-2;
+        &:hover {
+          background-color: $color-2;
+          color: $color-2;
+          background: $color-2;
+        }
+      }
+      &:hover {
+        background-color: $color-1;
+        color: $color-1;
+        background: $color-1;
+      }
+    }
+  }
+  //CONTROL PREV
+  .bannerControlsWpr.bannerControlsPrev{
+    @include brly-cero;
+    @include brly-flex-row;
+    background: transparent;
+    background-color: transparent;
+    padding-left: 40px;
+    z-index: 2;
+    .bannerControls{
+      @include brly-cero;
+      @include brly-flex-row;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background: transparent;
+      background-color: transparent;
+      border: 0;
+      position: relative;
+      margin-top: 20px;
+      &:after {
+        content: "\f104";
+        font-family: 'FontAwesome'!important;
+        font-size: 40px;
+        color: $white;
+        @include brly-animate;
+      }
+      &:hover{
+        @include brly-cero;
+        @include brly-flex-row;
+        margin-top: 20px;
+        &:after {
+          color: $color-1;
+        }
+      }
+    }
+  }
+  //CONTROL NEXT
+  .bannerControlsWpr.bannerControlsNext{
+    @include brly-cero;
+    @include brly-flex-row;
+    background: transparent;
+    background-color: transparent;
+    padding-right: 40px;
+    z-index: 2;
+    .bannerControls{
+      @include brly-cero;
+      @include brly-flex-row;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background: transparent;
+      background-color: transparent;
+      border: 0;
+      position: relative;
+      margin-top: 20px;
+      &:after {
+        content: "\f105";
+        font-family: 'FontAwesome'!important;
+        font-size: 40px;
+        color: $white;
+        @include brly-animate;
+      }
+      &:hover{
+        @include brly-cero;
+        @include brly-flex-row;
+        margin-top: 20px;
+        &:after {
+          color: $color-1;
+        }
+      }
+    }
+  }
+  // BANNER IMAGES
+  .brly-banner-animate-img{
+    width: 100vw;
+    height: 400px;
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    position: relative;
+    > a {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 400px;
+      width: 100vw;
+      z-index: 1;
+      background-color: transparent;
+    }
+    &.brly-banner-animate-img-1{
+      background-image: url("../../common/assets/img/sliders/slider-01.jpg");
+    }
+    &.brly-banner-animate-img-2{
+      background-image: url("../../common/assets/img/sliders/slider-02.jpg");
+    }
+    &.brly-banner-animate-img-3{
+      background-image: url("../../common/assets/img/sliders/slider-03.jpg");
+    }
+  }
+}
+
+//FOOTER
+
+footer.brly-footer {
+  margin-top: 40px;
+  display: block;
+  position: relative;
+  background: $color-1;
+  background-color: $color-1;
+  box-sizing: border-box;
+  padding: 20px 40px 20px 40px;
+  font-family: 'mukta malar', sans-serif;
+  //LOGO FOOTER
+  img.brly-logo-footer {
+    width: 100px;
+    height: auto; 
+  }
+  > .flex-row {
+    justify-content: space-between;
+    > .flex-row {
+      justify-content: flex-start;
+      //SOCIAL MEDIA LINKS
+      > .flex-row {
+        a {
+          @include brly-cero;
+          @include brly-clean-ahref;
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+          background-color: $white;
+          @include brly-flex-row;
+          span{
+            color: $color-1;
+          }
+          color: $white;
+          margin-right: 10px;
+          &:visited {
+            color: $white;
+          }
+          &:hover {
+            margin-right: 10px;
+            span {
+              color: $black;
+            }
+            &:last-of-type{
+              margin-rigth: 0px;
+            }
+          }
+          //FIX INSTAGRAM
+          &:nth-of-type(2){
+            span {
+              font-weight: 600;
+            }
+          }
+          &:last-of-type{
+            margin-rigth: 0px;
+          } 
+        }
+      } 
+       //LINKS FOOTER
+       > .flex-column {
+          ul.brly-footer-ul {
+            @include brly-cero;
+            @include brly-clean-webkit;
+            @include brly-clean-list;
+            margin-left: 20px!important;
+            @include brly-flex-col;
+            border-left: 1px dashed $white;
+            padding-left: 20px!important;
+            align-items: flex-start;
+            li.brly-footer-li {
+              @include brly-cero;
+              @include brly-clean-webkit;
+              @include brly-clean-list;
+              @include brly-flex-row;
+              color: $white;
+              justify-content: flex-start;
+              a {
+                @include brly-cero;
+                @include brly-clean-ahref;
+                display: inline-block;
+                color: $white;
+                font-family: 'mukta malar', sans-serif;
+                font-size: 14px;
+                font-weight: 300px;
+                cursor: pointer;
+                margin-bottom: 5px!important;
+                text-align: left;
+                &:hover {
+                  text-decoration: underline;
+                  color: $white;
+                }
+              }
+            }
+          }
+       }
+    }
+  }
+  p.brly-footer-p{
+    color: $white;
+    font-size: 13px;
+    font-weight: 300;
+    span {
+      font-size: 11px;
+      margin-right: 5px;
+    }
+  }
+} 

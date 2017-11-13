@@ -1,0 +1,125 @@
+/*METROPOLIS BLACK*/
+@font-face {
+  font-family: 'metro-black';
+  src: font-url('../assets/fonts/metropolis/metro-bk.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-bk.woff') format('woff');
+}
+
+/*METROPOLIS BLACK ITALIC*/
+@font-face {
+  font-family: 'metro-black-italic';
+  src: font-url('../assets/fonts/metropolis/metro-bk-i.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-bk-i.woff') format('woff');
+}
+
+/*METROPOLIS BOLD*/
+@font-face {
+  font-family: 'metro-bold';
+  src: font-url('../assets/fonts/metropolis/metro-b.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-b.woff') format('woff');
+}
+
+/*METROPOLIS BOLD ITALIC*/
+@font-face {
+  font-family: 'metro-bold-italic';
+  src: font-url('../assets/fonts/metropolis/metro-b-i.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-b-i.woff') format('woff');
+}
+
+/*METROPOLIS EXTRABOLD*/
+@font-face {
+  font-family: 'metro-extrabold';
+  src: font-url('../assets/fonts/metropolis/metro-eb.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-eb.woff') format('woff');
+}
+
+/*METROPOLIS EXTRABOLD ITALIC*/
+@font-face {
+  font-family: 'metro-extrabold-italic';
+  src: font-url('../assets/fonts/metropolis/metro-eb-i.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-eb-i.woff') format('woff');
+}
+
+/*METROPOLIS SEMIBOLD*/
+@font-face {
+  font-family: 'metro-semibold';
+  src: font-url('../assets/fonts/metropolis/metro-sb.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-sb.woff') format('woff');
+}
+
+/*METROPOLIS SEMIBOLD ITALIC*/
+@font-face {
+  font-family: 'metro-semibold-italic';
+  src: font-url('../assets/fonts/metropolis/metro-sb-i.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-sb-i.woff') format('woff');
+}
+
+/*METROPOLIS MEDIUM*/
+@font-face {
+  font-family: 'metro-medium';
+  src: font-url('../assets/fonts/metropolis/metro-m.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-m.woff') format('woff');
+}
+
+/*METROPOLIS MEDIUM ITALIC*/
+@font-face {
+  font-family: 'metro-medium-italic';
+  src: font-url('../assets/fonts/metropolis/metro-m-i.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-m-i.woff') format('woff');
+}
+
+/*METROPOLIS REGULAR*/
+@font-face {
+  font-family: 'metro-regular';
+  src: font-url('../assets/fonts/metropolis/metro-r.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-r.woff') format('woff');
+}
+
+/*METROPOLIS REGULAR ITALIC */
+@font-face {
+  font-family: 'metro-regular-italic';
+  src: font-url('../assets/fonts/metropolis/metro-r-i.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-r-i.woff') format('woff');
+}
+
+/*METROPOLIS LIGHT*/
+@font-face {
+  font-family: 'metro-light';
+  src: font-url('../assets/fonts/metropolis/metro-l.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-l.woff') format('woff');
+}
+
+/*METROPOLIS LIGHT ITALIC*/
+@font-face {
+  font-family: 'metro-light-italic';
+  src: font-url('../assets/fonts/metropolis/metro-l-i.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-l-i.woff') format('woff');
+}
+
+/*METROPOLIS EXTRALIGHT*/
+@font-face {
+  font-family: 'metro-extralight';
+  src: font-url('../assets/fonts/metropolis/metro-el.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-el.woff') format('woff');
+}
+
+/*METROPOLIS EXTRALIGHT ITALIC*/
+@font-face {
+  font-family: 'metro-extralight-italic';
+  src: font-url('../assets/fonts/metropolis/metro-el-i.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-el-i.woff') format('woff');
+}
+
+/*METROPOLIS THIN*/
+@font-face {
+  font-family: 'metro-thin';
+  src: font-url('../assets/fonts/metropolis/metro-t.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-t.woff') format('woff');
+}
+
+/*METROPOLIS THIN ITALIC*/
+@font-face{
+  font-family: 'metro-thin-italic';
+  src: font-url('../assets/fonts/metropolis/metro-t-i.woff2') format('woff2'),
+        font-url('../assets/fonts/metropolis/metro-t-i.woff') format('woff');
+}

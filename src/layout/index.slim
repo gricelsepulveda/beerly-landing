@@ -1,0 +1,335 @@
+doctype html
+html lang="es"
+  head
+    meta charset="utf-8"
+    title Beerly - Tu distrito cervecero
+    meta name="description" content="cervezas artesanales chilenas"
+    meta name="keywords" content="beerly, cerveza artesanal, cerveza, artesanal"/
+    meta name="author" content="Pablo Jacobi, Gricel Sepulveda"/
+    /! VIEWPORT RESPONSIVE
+    meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/
+    /! NORMALIZE
+    link rel="stylesheet" href="../../common/styles/normalize.min.css" type="text/css"
+    /! FONT AWESOME
+    link rel="stylesheet" href="../../common/styles/font-awesome.min.css" type="text/css"
+    /! METROPOLIS FONT
+    link rel="stylesheet" href="../../common/styles/metropolis.css" type="text/css"
+    /! STYLES ROTATOR
+    link rel="stylesheet" href="../../common/styles/jquery.simplebanner.css" type="text/css"
+    /! STYLES
+    link rel="stylesheet" href="../styles/brly-landing.min.css" type="text/css"
+    /! JQUERY
+    script src="../../common/scripts/jquery-3.2.1.min.js"
+    /! BANNER ROTATOR
+    script src="../../common/scripts/jquery.simplebanner.min.js"
+    /! CUSTOM SCRIPTS
+    /! script src="../scripts/brly-landing.min.js"
+
+  body
+
+    /! PROMO LINE TOP
+    h3.brly-promo-nav 
+      span.text-1 Promoción para nuevos suscriptores
+      span.text-2 |   
+      span.text-3 a sólo 
+      span.text-4 $9.990 
+      span.text-5 durante el primer mes
+
+    /! NAVBAR TOP
+    nav.brly-top-nav
+      .flex-row.flex-start
+        figure.brly-logo
+          img.brly-logotipo src="../../common/assets/img/logo/logo-beerly-10.svg"
+          img.brly-isotipo src="../../common/assets/img/logo/logo-beerly-11.svg"
+        ul.brly-main-menu
+          li.brly-li-menu
+            a href="#"
+              | Cómo
+              br
+              | funciona
+          li.brly-li-menu
+            a href="#"
+              | Porqué 
+              br
+              | elegir
+          li.brly-li-menu
+            a href="#"
+              | Regala 
+              br
+              | suscripción
+          li.brly-li-menu
+            a href="#"
+              | Guía 
+              br
+              | Cervecera
+      .flex-row.flex-end
+        /! LOGIN BUTTON
+        button.brly-login-button
+          span.fa.fa-user-o
+          span.brly-text Iniciar sesión
+        /! START SUSCRIPTION BUTTON NAV
+        button.brly-suscription-button-nav
+          | Suscríbete
+
+    /!USABLE BODY
+    .brly-main-wrapper
+
+      /! STATIC SLIDER
+      section.brly-static-slider
+        article.brly-promo-text
+          h1.brly-promo-text-h1 Suscríbete
+          p.brly-promo-text-p Lorem ipsum dolor consectetur adipiscing
+          /! START SUSCRIPTION BUTTON SLIDER
+          button.brly-suscription-slider-button-promo
+            | Acá
+          span.brly-suscription-slider-note-1 por sólo
+          span.brly-suscription-slider-price $14.990
+          .flex-column
+            span.brly-suscription-slider-note-2 al mes
+            span.brly-suscription-slider-note-3 Despacho incluido
+      
+      /! INCLUDES BANNER
+      section.brly-includes-slider
+        h2.brly-includes-h2 ¿Qué incluye la suscripción a Beerly?
+        /! INCLUDES ITEM
+        article.brly-includes-article
+          figure.brly-includes-fig
+            img src="../../common/assets/img/includes/includes-item-01.svg"
+          p.brly-includes-p Kit Beerly
+        span.fa.fa-arrow-right
+        /! INCLUDES ITEM
+        article.brly-includes-article
+          figure.brly-includes-fig
+            img src="../../common/assets/img/includes/includes-item-02.svg"
+          p.brly-includes-p Revista Suscribeër
+        span.fa.fa-arrow-right
+        /! INCLUDES ITEM
+        article.brly-includes-article
+          figure.brly-includes-fig
+            img src="../../common/assets/img/includes/includes-item-03.svg"
+          p.brly-includes-p 9 Cervezas 330ml
+        span.fa.fa-arrow-right 
+        /! INCLUDES ITEM
+        article.brly-includes-article
+          figure.brly-includes-fig
+            img src="../../common/assets/img/includes/includes-item-04.svg"
+          p.brly-includes-p Despacho incluído en RM
+        span.fa.fa-pause.revert
+        /! INCLUDES PRICE
+        .flex-column
+          span.brly-includes-price $14.990
+          span.brly-includes-note Al mes
+
+      /! HOW IT WORKS
+      section.brly-how
+        /! LINES ARROW
+        .brly-line
+        .brly-line-2
+        .brly-arrow-next.brly-arrow-next-1
+        .brly-arrow-next.brly-arrow-next-2
+        .brly-arrow-next.brly-arrow-next-3
+        /! SECTION IT WORKS
+        h2.brly-how-h2 ¿Cómo funciona?
+        p.brly-how-p El club de cervezas artesanales Beerly
+        .flex-row
+          /! STEP 1
+          article.brly-how-article.brly-how-article-1
+            .flex-row
+              h3.brly-how-article-h3 Suscríbete por $14.990 al mes
+              span.brly-how-article-note 1
+            p.brly-how-article-p Lorem ipsum dolor consectetur adipiscing. Lorem ipsum dolor consectetur adipiscing.
+            figure.brly-how-article-img
+              img src="../../common/assets/img/how/how-1.svg"
+          /! STEP 2
+          article.brly-how-article.brly-how-article-2
+            .flex-row
+              span.brly-how-article-note 2
+              h3.brly-how-article-h3 Espera en casa tus Kit Beerly
+            p.brly-how-article-p Con 9 cervezas artesanales, tu revista Suscribeër y una guía de maridaje para que descubras nuevas cervezas y experiencias
+            figure.brly-how-article-img
+              img src="../../common/assets/img/how/how-2.svg"
+        .flex-row
+          /! STEP 3
+          article.brly-how-article.brly-how-article-3
+            .flex-row
+              h3.brly-how-article-h3 Califica tus favoritas
+              span.brly-how-article-note 3
+            p.brly-how-article-p Haz crecer al club y al mercado de la cerveza artesanal local premiando a las mejores para que otros también las prueben
+            figure.brly-how-article-img
+              img src="../../common/assets/img/how/how-3.svg"
+          /! STEP 4
+          article.brly-how-article.brly-how-article-4
+            .flex-row
+              span.brly-how-article-note 4
+              h3.brly-how-article-h3 Disfruta de tus cervezas escogidas
+            p.brly-how-article-p 9 Cervezas artesanales: 6 Diferentes, 2 Kunstmann y la mejor evaluada del mes anterior. ¡Alcanzan para disfrutar y hasta para compartir con tus amigos!
+            figure.brly-how-article-img
+              img src="../../common/assets/img/how/how-4.svg"
+        .brly-divisor
+
+      /! RE PROMOTION
+      section.brly-re-promo
+        p.brly-re-promo
+          | Suscríbete
+          button.brly-re-promo-button Acá
+          | por solo 
+          span.brly-re-promo-price $14.990
+          span.brly-re-promo-note 
+            |/mes
+      
+      /! WHY AND KIT
+      section.brly-why
+        /! WHY
+        h2.brly-why-h2 ¿Porqué elegir?
+        p.brly-why-p El club de cervezas artesanales Beerly
+        .flex-row
+          article.brly-why-article
+            figure.figure-brly-why-article
+              img src="../../common/assets/img/why/why-item-01.svg"
+            p.brly-how-article-p ¡Un precio increíble para tí!
+          article.brly-why-article
+            figure.figure-brly-why-article
+              img src="../../common/assets/img/why/why-item-01.svg"
+            p.brly-how-article-p Tus artesanales en el formato más popular
+          article.brly-why-article
+            figure.figure-brly-why-article
+              img src="../../common/assets/img/why/why-item-01.svg"
+            p.brly-how-article-p Puedes calificar tus cervezas y ver lo que otros opinaron de ellas
+        .flex-row
+          article.brly-why-article
+            figure.figure-brly-why-article
+              img src="../../common/assets/img/why/why-item-01.svg"
+            p.brly-how-article-p Sin amarres. Congela o termina tu membresía cuando quieras.
+          article.brly-why-article
+            figure.figure-brly-why-article
+              img src="../../common/assets/img/why/why-item-01.svg"
+            p.brly-how-article-p 20%dscto. el primer mes para que nos pruebes y recomiendes
+          article.brly-why-article
+            figure.figure-brly-why-article
+              img src="../../common/assets/img/why/why-item-01.svg"
+            p.brly-how-article-p Llegamos a la puerta de tu casa
+
+        /! KIT
+        h2.brly-why-h2 Conoce los Kit
+        p.brly-why-p del club de cervezas artesanales Beerly
+        .flex-row
+          article.brly-why-kit-article
+            .flex-row
+              figure.brly-why-kit-figure-big
+                img src="../../common/assets/img/why/why-item-01.svg"
+              .flex-column.brly-why-kit-first-box
+                p.brly-why-kit-p KIT BEERLY NORMAL
+                p.brly-why-kit-p
+                  | 9 botellas
+                  br
+                  | 330cc
+                .brly-why-kit-drinks
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+          article.brly-why-kit-article
+            .flex-row
+              figure.brly-why-kit-figure-big
+                img src="../../common/assets/img/why/why-item-01.svg"
+              .flex-column.brly-why-kit-first-box
+                p.brly-why-kit-p KIT BEERLY DUO
+                p.brly-why-kit-p
+                  | 18 botellas
+                  br
+                  | 330cc
+                .brly-why-kit-drinks
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+                  img src="../../common/assets/img/why/why-item-01.svg"
+          article.brly-why-kit-article
+            .flex-column
+              p.brly-why-kit-p2
+                span.fa.fa-angle-right 
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              p.brly-why-kit-p2
+                span.fa.fa-angle-right 
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+      /! ANIMATE BANNER
+      section.brly-banner-animate
+        #rotating.simpleBanner
+          .bannerListWpr
+            ul.bannerList
+              li.brly-banner-animate-img.brly-banner-animate-img-1
+               a href="#"
+              li.brly-banner-animate-img.brly-banner-animate-img-2
+               a href="#"
+              li.brly-banner-animate-img.brly-banner-animate-img-3
+               a href="#"
+          .bannerControlsWpr.bannerControlsPrev
+            .bannerControls
+          .bannerIndicators
+            ul
+          .bannerControlsWpr.bannerControlsNext
+            .bannerControls
+      
+      /! FOOTER
+      footer.brly-footer
+        .flex-row
+          .flex-row
+            .flex-row
+              a href="#"
+                span.fa.fa-facebook
+              a href="#"
+                span.fa.fa-instagram
+              a href="#"
+                span.fa.fa-envelope
+            .flex-column
+              ul.brly-footer-ul
+                li.brly-footer-li
+                  a href="#" Lee Suscribeër
+                li.brly-footer-li
+                  a href="#" Preguntas frecuentes
+                li.brly-footer-li
+                  a href="#" Términos y Condiciones
+          p.brly-footer-p
+            span.fa.fa-copyright
+            | Beerly 2015-2017. Todos los derechos reservados.
+          img.brly-logo-footer src="../../common/assets/img/logo/logo-beerly-06.svg"
+
+        
+    javascript:
+      $('#rotating').simplebanner();
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+    
+
