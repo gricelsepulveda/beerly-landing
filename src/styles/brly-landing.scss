@@ -155,6 +155,9 @@ nav.brly-top-nav {
       @include brly-flex-col;
       display: none;
     }
+    &.display {
+      display: flex;
+    }
     //MENU OPTIONS
     li.brly-li-menu {
       @include brly-clean-list;
@@ -227,12 +230,6 @@ nav.brly-top-nav {
       span.fa.fa-sort-down {
         color: $color-1;
       }
-      ul.brly-logged-options{
-        &.active {
-          display: inherit!important;
-          display: flex!important;
-        }
-      }
     }  
     span {
       display: inline-block;
@@ -292,7 +289,11 @@ nav.brly-top-nav {
         right: -20px;
         top: 30px;
         border: 1px solid rgba($white, 0.25);
-        border-radius: 0px 0px 4px 4px; 
+        border-radius: 0px 0px 4px 4px;
+        display: none!important;
+      }
+      &.display {
+        display: flex!important;
       }
       li.brly-logged-option-li {
         @include brly-flex-row;
@@ -832,7 +833,11 @@ section.brly-re-promo {
   background-color: $color-2;
   padding: 20px;
   box-sizing: border-box;
-  margin: 10px 40px 10px 40px;
+  margin: 10px 40px 20px 40px;
+  @media #{$sm}{
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+  }
   p.brly-re-promo {
     @include brly-cero;
     color: $white;
@@ -957,8 +962,7 @@ section.brly-why{
       position: relative;
       @include brly-flex-row;
       img {
-        width: 60%;
-        height: auto;
+        height: 80px;
       }
     }
     p.brly-how-article-p {
@@ -1345,6 +1349,11 @@ footer.brly-footer {
   z-index: 6;
   font-family: 'mukta malar';
   color: $white;
+  @media #{$sm}{
+    max-width: 95vw;
+    max-height: 90vh;
+    text-align: center;
+  }
   h2.brly-register-h2 {
     @include brly-cero;
     font-size: 28px;
@@ -1352,6 +1361,9 @@ footer.brly-footer {
     text-align: center;
     margin-bottom: 0px;
     display: block;
+    @media #{$sm}{
+      margin-top: 10px;
+    }
   }
   p.brly-register-p {
     @include brly-cero;
@@ -1378,6 +1390,9 @@ footer.brly-footer {
     font-weight: 300;
     @include brly-flex-row;
     @include brly-animate;
+    @media #{$sm}{
+      font-size: 20px;
+    }
     &:hover {
       color: $color-1;
       background: transparent;
@@ -1565,6 +1580,18 @@ form {
     cursor: pointer;
     &.highlight{
       color: $color-1;
+      padding: 0!important;
+      height: auto!important;
+      background: transparent!important;
+      background-color: transparent!important;
+      border: 0!important;
+      &:hover {
+        padding: 0!important;
+        height: auto!important;
+        background: transparent!important;
+        background-color: transparent!important;
+        border: 0!important;
+      }
     }
     &:hover {
       text-decoration: underline;
@@ -1670,6 +1697,10 @@ span.brly-form-price-big {
   align-items: flex-start;
   justify-content: flex-start;
   align-content: flex-start;
+  @media #{$sm}{
+    max-width: 100%;
+    max-height: 60vh;
+  }
   .ask {
     text-transform: inherit!important;
     margin-top: 5px;
@@ -1680,11 +1711,9 @@ span.brly-form-price-big {
 }
 
 //  INPUT RADIO
-
 .brly-selector-pay {
   margin-top: 10px;
 }
-
 .brly-label-radio {
   margin-right: 0.5rem;
   .brly-input-radio {
@@ -1708,6 +1737,130 @@ span.brly-form-price-big {
 }
 
 
+//RESPONSIVE POP OTHER PAYMENT METHODS
+.brly-buy-pop-other{
+  @media #{$sm}{
+    .brly-selector-pay{
+      label.brly-label-radio {
+        img.brly-radio-img{
+          width: auto;
+          height: 35px;
+        }
+      }
+    }
+    .brly-buttons{
+      flex-direction: column;
+      .other {
+        margin-top: -10px;
+        margin-left: 0px!important;
+      }
+    }
+  }
+}
 
+//RESPONSIVE POP REGISTER
+.brly-login-pop {
+  @media #{$sm}{
+    > .flex-row {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 10px;
+      @include brly-cero;
+      .brly-form-part-1 {
+        margin-right: 0px!important;
+      }
+      .brly-form-part-2 {
+        margin-left: 0px!important;
+        width: 95%;
+        > span.brly-form-span {
+          font-size: 24px;
+          color: $color-1;
+        }
+        .brly-register-form{
+          width: 100%;
+        }
+      }
+      > .flex-column {
+        justify-content: flex-start;
+        align-items: center;
+        &:last-of-type {
+          margin-top: 260px;
+        }
+        span.brly-form-span {
+          text-align: center;
+        }
+        .flex-row.width-300p {
+          flex-direction: column;
+          width: 100%;
+          max-width: 100%;
+          min-width: 100%;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          @include brly-cero;
+          label.brly-label {
+            @include brly-cero;
+            margin-bottom: 5px;
+            text-align: center;
+          }
+          input.brly-input{
+            @include brly-cero;
+          }
+          margin-bottom: 10px;
+        }
+        .brly-facebook-button{
+          width: 210px;
+          max-width: 210px;
+          min-width: 210px;
+          line-height: 14px;
+          padding-left: 20px;
+          padding-top: 3px;
+          position: relative;
+          span {
+            position: absolute;
+            left: 10px;
+            top: 6px;
+          }
+        }
+      }
+    }
+  }
+}
 
+//RESPONSIVE POP SUSCRIPCION WEBPAY ONE CLICK
+.brly-buy-pop {
+  @media #{$sm}{
+    overflow-y: auto;
+    overflow-x: hidden;
+    .flex-row.width-300p {
+      width: 250px;
+      max-width: 250px;
+      min-width: 250px;
+      flex-direction: column!important;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      label.brly-label {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    }
+    .brly-payment-options {
+      flex-direction: column;
+      button.brly-register-button{
+        @include brly-cero;
+        padding: 0px 10px 0px 10px;
+        margin-top: 10px;
+      }
+    }
+    .flex-row.brly-resume {
+      align-items: flex-start!important;
+    }
+  }
+}
 
