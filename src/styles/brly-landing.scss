@@ -153,6 +153,7 @@ nav.brly-top-nav {
       width: 100%;
       background-color: $black;
       @include brly-flex-col;
+      display: none;
     }
     //MENU OPTIONS
     li.brly-li-menu {
@@ -287,6 +288,12 @@ nav.brly-top-nav {
       border-radius: 20px 0px 4px 4px;
       width: 100px;
       display: none!important;
+      @media #{$sm}{
+        right: -20px;
+        top: 30px;
+        border: 1px solid rgba($white, 0.25);
+        border-radius: 0px 0px 4px 4px; 
+      }
       li.brly-logged-option-li {
         @include brly-flex-row;
         justify-content: flex-end;
@@ -297,6 +304,9 @@ nav.brly-top-nav {
         color: $white;
         &:last-of-type {
           border-bottom: 0px;
+        }
+        @media #{$sm}{
+          height: 40px;
         }
         a {
           @include brly-cero;
@@ -328,6 +338,25 @@ nav.brly-top-nav {
           }
         }
       }
+    }
+    @media #{$sm}{
+      margin-right: 40px!important;
+    }
+  }
+  //MOBILE MENU
+  span.fa.fa-bars{
+    width: 30px;
+    height: 30px;
+    @include brly-flex-row;
+    font-size: 26px;
+    color: $color-1;
+    display: none!important;
+    @media #{$sm}{
+      display: flex!important;
+      position: absolute;
+      right: 10px;
+      top: 20px;
+      cursor: pointer;
     }
   }
   //START SUSCRIPTION BUTTON
@@ -382,6 +411,9 @@ nav.brly-top-nav {
     repeat: repeat;
     position: center;
   }
+  @media #{$sm}{
+    margin-top: 98px;
+  }
 }
 
 //FIRST STATIC SLIDER
@@ -397,6 +429,9 @@ section.brly-static-slider {
   }
   display: inline-block;
   position: relative;
+  @media #{$sm}{
+    height: calc(100vh - 98px);
+  }
   //PROMOTIONAL TEXTS
   article.brly-promo-text{
     height: 400px;
@@ -408,6 +443,12 @@ section.brly-static-slider {
     top: 0px;
     background: rgba($black, 0.25);
     @include brly-flex-col;
+    @media #{$sm}{
+      height: calc(100vh - 98px);
+      width: 100%;
+      right: 0px;
+      padding: 10px;
+    }
     h1.brly-promo-text-h1, p.brly-promo-text-p {
       @include brly-cero;
       font-family: 'mukta malar', sans-serif;
@@ -509,16 +550,25 @@ section.brly-includes-slider {
   padding: 20px;
   box-sizing: border-box;
   margin: 20px 40px 20px 40px;
+  @media #{$sm}{
+    flex-wrap: wrap;
+  }
   h2.brly-includes-h2 {
     font-size: 24px;
     font-weight: 600;
     text-align: center;
     max-width: 300px;
     margin-right: 40px;
+    @media #{$sm}{
+      margin-right: 0px;
+    }
   }
-  .span.fa {
+  span.fa {
     font-size: 18px;
     display: inline-block;
+    @media #{$sm}{
+      display: none;
+    }
   }
   .revert {
     transform: rotate(90deg);
@@ -567,6 +617,10 @@ section.brly-how {
   margin: 0px 40px 20px 40px;
   position: relative;
   @include brly-flex-col; 
+  @media #{$sm}{
+    padding: 0px 10px 0px 10px;
+    margin: 0px 20px 10px 20px;
+  }
   .brly-line {
     position: absolute;
     left: 50%;
@@ -574,6 +628,9 @@ section.brly-how {
     width: 1px;
     border-right: 1px dashed $color-1;
     z-index: 1;
+    @media #{$sm}{
+      display: none;
+    }
   }
   .brly-line-2 {
     position: absolute;
@@ -582,6 +639,9 @@ section.brly-how {
     height: 1px;
     border-top: 1px dashed $color-1;
     z-index: 1;
+    @media #{$sm}{
+      display: none;
+    }
   }
   .brly-divisor {
     display: block;
@@ -589,6 +649,9 @@ section.brly-how {
     height: 40px;
     background-color: $white;
     z-index: 2;
+    @media #{$sm}{
+      display: none;
+    }
   }
   .brly-arrow-next {
     width: 25px;
@@ -599,6 +662,9 @@ section.brly-how {
       repeat: no-repeat;
     }
     position: absolute;
+    @media #{$sm}{
+      display: none;
+    }
     &.brly-arrow-next-1{
       left: calc(50% - 10px);
       top: 25%;
@@ -641,6 +707,11 @@ section.brly-how {
     z-index: 2;
   }
   .flex-row {
+    @media #{$sm}{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     article.brly-how-article {
       width: 100%;
       display: block;
@@ -668,9 +739,15 @@ section.brly-how {
         margin-bottom: 0px;
         margin-left: 10px;
         margin-right: 10px;
+        @media #{$sm}{
+          text-align: center;
+        }
       }
       p.brly-how-article-p {
         max-width: 300px;
+        @media #{$sm}{
+          text-align: center;
+        }
       }
       figure.brly-how-article-img {
         img {
@@ -681,16 +758,31 @@ section.brly-how {
       &.brly-how-article-1{
         align-items: flex-end;
         padding-right: 40px;
+        @media #{$sm}{
+          align-items: center;
+          padding-right: inherit;
+        }
         h3.brly-how-article-h3, p.brly-how-article-p {
           text-align: right;
+          @media #{$sm}{
+            text-align: center;
+          }
         }
       }
       &.brly-how-article-2{
         align-items: flex-start;
         margin-top: 150px;
         padding-left: 40px;
+        @media #{$sm}{
+          margin-top: inherit;
+          align-items: center;
+          padding-left: inherit;
+        }
         h3.brly-how-article-h3, p.brly-how-article-p {
           text-align: left;
+          @media #{$sm}{
+            text-align: center;
+          }
         }
         figure.brly-how-article-img {
           img {
@@ -701,16 +793,31 @@ section.brly-how {
       &.brly-how-article-3{
         align-items: flex-end;
         padding-right: 40px;
+        @media #{$sm}{
+          align-items: center;
+          padding-right: 0px;
+        }
         h3.brly-how-article-h3, p.brly-how-article-p {
           text-align: right;
+          @media #{$sm}{
+            text-align: center;
+          }
         }
       }
       &.brly-how-article-4{
         align-items: flex-start;
         margin-top: 150px;
         padding-left: 40px;
+        @media #{$sm}{
+          align-items: center;
+          margin-top: inherit;
+          padding-left: inherit;
+        }
         h3.brly-how-article-h3, p.brly-how-article-p {
           text-align: left;
+          @media #{$sm}{
+            text-align: center;
+          }
         }
       }
     }
@@ -798,6 +905,10 @@ section.brly-why{
   margin: 0px 40px 20px 40px;
   position: relative;
   @include brly-flex-col;
+  @media #{$sm}{
+    padding: 0px 20px 10px 20px;
+    margin: 0px 20px 10px 20px;
+  }
   h2.brly-why-h2 {
     font-size: 28px;
     font-weight: 600;
@@ -809,6 +920,9 @@ section.brly-why{
     display: block;
     background-color: $white;
     z-index: 2;
+    @media #{$sm}{
+      padding-top: 20px;
+    }
   }
   p.brly-why-p {
     margin-top: 0px;
@@ -820,10 +934,21 @@ section.brly-why{
     background-color: $white;
     z-index: 2;
   }
+  .flex-row {
+    @media #{$sm}{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   article.brly-why-article {
     max-width: 200px;
     padding: 20px 40px 20px 40px;
     @include brly-flex-col;
+    @media #{$sm}{
+      max-width: 300px;
+      padding: 10px 20px 10px 20px;
+    }
     figure.figure-brly-why-article {
       width: 100px;
       height: 100px;
@@ -847,6 +972,10 @@ section.brly-why{
   .flex-row {
     justify-content: flex-start;
     align-items: flex-start;
+    @media #{$sm}{
+      justify-content: center;
+      align-items: center;
+    }
     article.brly-why-kit-article {
       width: 100%;
       .flex-row {
@@ -867,6 +996,9 @@ section.brly-why{
             font-weight: 400;
             text-align: left;
             display: block;
+            @media #{$sm}{
+              text-align: center;
+            }
             &:last-of-type {
               margin-top: 0px;
               font-weight: 300;
@@ -897,6 +1029,11 @@ p.brly-why-kit-p2{
   padding-left: 26px;
   &:last-of-type{
     margin-top: 20px;
+  }
+  @media #{$sm}{
+    &:first-of-type {
+      margin-top: 20px;
+    }
   }
   span.fa.fa-angle-right {
     width: 20px;
@@ -1063,15 +1200,28 @@ footer.brly-footer {
   box-sizing: border-box;
   padding: 20px 40px 20px 40px;
   font-family: 'mukta malar', sans-serif;
+  @media #{$sm}{
+    padding: 10px 20px 10px 20px;
+  }
   //LOGO FOOTER
   img.brly-logo-footer {
     width: 100px;
     height: auto; 
+    @media #{$sm}{
+      width: 60px;
+    }
   }
   > .flex-row {
     justify-content: space-between;
+    @media #{$sm}{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
     > .flex-row {
       justify-content: flex-start;
+      @media #{$sm}{
+        justify-content: center;
+      }
       //SOCIAL MEDIA LINKS
       > .flex-row {
         a {
@@ -1097,7 +1247,7 @@ footer.brly-footer {
               color: $black;
             }
             &:last-of-type{
-              margin-rigth: 0px;
+              margin-right: 0px;
             }
           }
           //FIX INSTAGRAM
@@ -1107,7 +1257,7 @@ footer.brly-footer {
             }
           }
           &:last-of-type{
-            margin-rigth: 0px;
+            margin-right: 0px;
           } 
         }
       } 
