@@ -1033,7 +1033,7 @@ $lg-abs: "(min-width: 992px) and (max-width: 1199px)";
     justify-content: flex-end;
   }
   &.flex-center {
-    justify-content: flex-center;
+    align-items: center;
   }
   &.flex-between{
     justify-content: space-between;

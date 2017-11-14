@@ -19,6 +19,15 @@ body {
   position: relative;
 }
 
+button {
+  outline: 0;
+  outline: none;
+  &:hover, &:focus, &:visited, &:active {
+    outline: 0;
+    outline: none;
+  }
+}
+
 h3.brly-promo-nav {
   height: 28px;
   width: 100%;
@@ -111,7 +120,7 @@ nav.brly-top-nav {
     @include brly-flex-row;
     justify-content: flex-start;
     //MENU OPTIONS
-    li {
+    li.brly-li-menu {
       @include brly-clean-list;
       @include brly-cero;
       @include brly-clean-webkit;
@@ -120,7 +129,7 @@ nav.brly-top-nav {
         @include brly-clean-ahref;
         display: inline-block;
         cursor: pointer;
-        color: $white;
+        color: $white!important;
         height: auto;
         font: {
           size: 14px;
@@ -133,8 +142,8 @@ nav.brly-top-nav {
         }
         @include brly-animate;
         margin-top: 20px;
-        &:hover, &.active, &:focus, &:visited {
-          color: $color-1;
+        &:hover, &.active, &:focus {
+          color: $color-1!important;
           margin-top: 20px;
         }
       }
@@ -1094,3 +1103,405 @@ footer.brly-footer {
     }
   }
 } 
+
+//LOGIN POP UP
+
+.brly-bg-pop {
+  width: 100vw;
+  height: 100vh;
+  background: rgba($black, 0.75);
+  background-color: rgba($black, 0.75);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 4;
+  @include brly-flex-row;
+}
+
+.brly-pop-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 5;
+  @include brly-flex-row;
+}
+
+.brly-login-pop, .brly-buy-pop, .brly-recovery-pop, .brly-buy-pop-oneclick, .brly-pop-faq, .brly-buy-pop-other{
+  width: auto;
+  max-height: 640px;
+  background-color: $black;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 6;
+  font-family: 'mukta malar';
+  color: $white;
+  h2.brly-register-h2 {
+    @include brly-cero;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0px;
+    display: block;
+  }
+  p.brly-register-p {
+    @include brly-cero;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 40px;
+  }
+  button.brly-register-close {
+    @include brly-cero;
+    border: none;
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    top: 0px; right: 0px;
+    cursor: pointer;
+    color: $white;
+    border-radius: 0;
+    background: transparent;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 300;
+    @include brly-flex-row;
+    @include brly-animate;
+    &:hover {
+      color: $color-1;
+      background: transparent;
+      background-color: transparent;
+    }
+  }
+  > .flex-row {
+    justify-content: center;
+    align-items: flex-start;
+    > .flex-column {
+      align-items: flex-start;
+      &:first-of-type {
+        margin-right: 20px;
+      }
+      &:last-of-type {
+        margin-left: 20px;
+      }
+    }
+  }
+  .brly-register-button {
+    background-color: $color-1;
+    background: $color-1;
+    border: 1px solid $color-1;
+    &:hover {
+      background-color: lighten($color-1, 10%);
+      background: lighten($color-1, 10%);
+      border: 1px solid $color-1;
+    }
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .brly-facebook-button {
+    background-color: #3b5998;
+    background: #3b5998;
+    border: 1px solid #3b5998;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    &:hover {
+      background-color: lighten( #3b5998, 10%);
+      background: lighten( #3b5998, 10%);
+      border: 1px solid #3b5998;
+    }
+  }
+}
+
+span.brly-form-span {
+  font: {
+    family: 'mukta malar';
+    size: 14px;
+    weight: 300;
+  }
+  display: block;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+
+form {
+  .flex-row {
+    @include brly-flex-row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  label.brly-label{
+    font-size: 13px;
+    text-align: left;
+    max-width: 70px;
+    width: 70px; 
+    min-width: 70px;
+  } 
+  input.brly-input {
+    height: 28px;
+    width: 100%;
+    @include brly-cero;
+    border: 0;
+    outline: 0;
+    box-shadow: 0;
+    padding: 0px 6px 0px 6px;
+    font: {
+      family: 'mukta malar';
+      size: 13px;
+      weight: 400;
+    }
+    color: $black;
+    background-color: $white;
+    margin-left: 10px;
+    position: relative;
+    &:hover, &:active, &:focus {
+      @include brly-cero;
+      padding: 0px 6px 0px 6px;
+      border: 0;
+      outline: 0;
+      box-shadow: 0;
+      margin-left: 10px;
+    }
+    &.error {
+      border: 1px solid red;
+      background-color: $white!important;
+      background: url("../../common/assets/img/error.svg");
+      background-size: 16px 16px;
+      background-position: 98% 6px;
+      background-repeat: no-repeat;
+    }
+  }
+  select.brly-select {
+    height: 28px;
+    width: 100%;
+    @include brly-cero;
+    border: 0;
+    outline: 0;
+    box-shadow: 0;
+    padding: 0px 6px 0px 6px;
+    font: {
+      family: 'mukta malar';
+      size: 13px;
+      weight: 400;
+    }
+    color: $black;
+    background-color: $white;
+    margin-left: 10px;
+    &:hover, &:active, &:focus {
+      @include brly-cero;
+      padding: 0px 6px 0px 6px;
+      border: 0;
+      outline: 0;
+      box-shadow: 0;
+      margin-left: 10px;
+    }
+  }
+  textarea.brly-textarea {
+    height: 100px;
+    width: 100%;
+    @include brly-cero;
+    border: 0;
+    outline: 0;
+    box-shadow: 0;
+    padding: 6px;
+    font: {
+      family: 'mukta malar';
+      size: 13px;
+      weight: 400;
+    }
+    color: $black;
+    background-color: $white;
+    margin-left: 10px;
+    &:hover, &:active, &:focus {
+      @include brly-cero;
+      padding: 6px;
+      border: 0;
+      outline: 0;
+      box-shadow: 0;
+      margin-left: 10px;
+    }
+  }
+  button {
+    outline: 0;
+    box-shadow: 0;
+    border-radius: 2px;
+    height: 32px;
+    padding: 0px 10px 0px 10px;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    font: {
+      family: 'mukta malar';
+      size: 16px;
+      weight: 600;
+    }
+    color: $white;
+    cursor: pointer; 
+    @include brly-animate;
+    span {
+      margin-right: 6px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  .brly-form-a {
+    color: $white;
+    font-size: 13px;
+    font-weight: 300;
+    cursor: pointer;
+    &.highlight{
+      color: $color-1;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    span {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+  }
+}
+
+span.brly-form-span-2, span.brly-form-span-3{
+  font: {
+    family: 'mukta malar';
+    size: 14px;
+    weight: 300;
+  }
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  width: 100%;
+  color: $color-1;
+  span.brly-form-price{
+    font: {
+      family: 'mukta malar';
+      size: 14px;
+      weight: 400;
+    }
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    width: 100%;
+    color: $white;
+  }
+}
+
+
+
+span.brly-form-span-3 {
+  font-weight: 500;
+  color: $white;
+}
+
+span.brly-form-price-big {
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+.highlight {
+  background: #3CAF85!important;
+  background-color: #3CAF85!important;
+  border: 1px solid #3CAF85!important;
+  height: 48px!important;
+  @include brly-animate;
+  &:hover {
+    background: lighten(#3CAF85, 10%)!important;
+    background-color: lighten(#3CAF85, 10%)!important;
+    border: 1px solid #3CAF85!important;
+  }
+}
+
+.other {
+  background: lighten($black, 20%)!important;
+  background-color: lighten($black, 20%)!important;
+  border: 1px solid lighten($black, 20%)!important;
+  margin-left: 10px;
+  @include brly-animate;
+  &:hover {
+    margin-left: 10px;
+    background: lighten($black, 30%)!important;
+    background-color: lighten($black, 30%)!important;
+    border: 1px solid lighten($black, 20%)!important;
+  }
+}
+
+.webpay-oneclick {
+  margin-right: 5px;
+  width: 60px;
+  margin-top: -10px;
+  height: auto;
+}
+
+.brly-buy-pop {
+  span.brly-form-span-2 {
+    margin-top: 20px;
+  }
+}
+
+.ask {
+  text-transform: inherit!important;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+// FAQ
+.brly-ask-container {
+  max-width: 640px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  .ask {
+    text-transform: inherit!important;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+//  INPUT RADIO
+/* INPUT RADIO*/
+
+.brly-selector-pay {
+  margin-top: 10px;
+}
+
+.brly-label-radio {
+  margin-right: 0.5rem;
+  .brly-input-radio {
+    visibility: hidden;
+    position: absolute;
+  }
+  .brly-input-radio + img {
+    cursor: pointer;
+    border: 1px solid rgba($white, 0.25);
+    padding: 0.5rem;
+    @include brly-animate;
+  }
+  .brly-input-radio:checked + img { 
+    border: 1px solid $color-1;
+    padding: 0.5rem;
+  }
+  img.brly-radio-img {
+    width: auto;
+    height: 40px;
+  }
+}
+
+
+
+
+

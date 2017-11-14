@@ -15,6 +15,14 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/.vscode\/settings.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/.vscode\/settings-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/common\/assets\/fonts\/fontawesome\/fontawesome.eot": {
 		"ft": 8192,
 		"oA": 2,
@@ -275,6 +283,16 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/common\/assets\/img\/error.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/common\/assets\/img\/error.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/common\/assets\/img\/how\/how-1.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -525,6 +543,39 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/common\/assets\/img\/tb.png": {
+		"ft": 32768,
+		"iS": 4334,
+		"oA": 0,
+		"oAP": "\/common\/assets\/img\/tb.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/common\/assets\/img\/webpay_oc.png": {
+		"ft": 32768,
+		"iS": 36959,
+		"oA": 0,
+		"oAP": "\/common\/assets\/img\/webpay_oc.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/common\/assets\/img\/webpay_oc2.png": {
+		"ft": 32768,
+		"iS": 8267,
+		"oA": 0,
+		"oAP": "\/common\/assets\/img\/webpay_oc2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/common\/assets\/img\/why\/why-item-01.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -534,6 +585,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/common\/assets\/img\/wp.png": {
+		"ft": 32768,
+		"iS": 39252,
+		"oA": 0,
+		"oAP": "\/common\/assets\/img\/wp.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/common\/scripts\/jquery-3.2.1.min.js": {
 		"ft": 64,
@@ -637,6 +699,26 @@
 		"oAP": "\/dist\/styles\/brly-landing.min.css.map",
 		"oF": 0
 		},
+	"\/dist\/styles\/brly-tooltips.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/dist\/styles\/brly-tooltips-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/dist\/styles\/brly-tooltips.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/dist\/styles\/brly-tooltips.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/README.md": {
 		"cS": 0,
 		"eF": 1,
@@ -676,6 +758,12 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/src\/styles\/.sass-cache\/e4fce5cc4372009fd6fe35fe9a6bf44eed71d22f\/brly-tooltips.scssc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/src\/styles\/.sass-cache\/e4fce5cc4372009fd6fe35fe9a6bf44eed71d22f\/brly-tooltips.scssc",
+		"oF": 0
+		},
 	"\/src\/styles\/brly-landing.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -701,6 +789,19 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/src\/styles\/brly-tooltips.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/dist\/styles\/brly-tooltips.min.css",
+		"oF": 2,
+		"oS": 3,
+		"uL": 0
 		}
 	},
 "hooks": [

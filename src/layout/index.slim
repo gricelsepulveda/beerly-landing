@@ -17,6 +17,7 @@ html lang="es"
     /! STYLES ROTATOR
     link rel="stylesheet" href="../../common/styles/jquery.simplebanner.css" type="text/css"
     /! STYLES
+    link rel="stylesheet" href="../styles/brly-tooltips.min.css" type="text/css"
     link rel="stylesheet" href="../styles/brly-landing.min.css" type="text/css"
     /! JQUERY
     script src="../../common/scripts/jquery-3.2.1.min.js"
@@ -64,7 +65,7 @@ html lang="es"
               | Cervecera
       .flex-row.flex-end
         /! LOGIN BUTTON
-        button.brly-login-button
+        button.brly-login-button type="button"
           span.fa.fa-user-o
           span.brly-text Iniciar sesión
           span.fa.fa-sort-down.display-none
@@ -78,7 +79,7 @@ html lang="es"
                 | Salir
                 span.fa.fa-sign-out
         /! START SUSCRIPTION BUTTON NAV
-        button.brly-suscription-button-nav
+        button.brly-suscription-button-nav type="button"
           | Suscríbete
 
     /!USABLE BODY
@@ -90,7 +91,7 @@ html lang="es"
           h1.brly-promo-text-h1 Suscríbete
           p.brly-promo-text-p Lorem ipsum dolor consectetur adipiscing
           /! START SUSCRIPTION BUTTON SLIDER
-          button.brly-suscription-slider-button-promo
+          button.brly-suscription-slider-button-promo type="button"
             | Acá
           span.brly-suscription-slider-note-1 por sólo
           span.brly-suscription-slider-price $14.990
@@ -181,7 +182,7 @@ html lang="es"
       section.brly-re-promo
         p.brly-re-promo
           | Suscríbete
-          button.brly-re-promo-button Acá
+          button.brly-re-promo-button type="button" Acá
           | por solo 
           span.brly-re-promo-price $14.990
           span.brly-re-promo-note 
@@ -322,8 +323,224 @@ html lang="es"
             span.fa.fa-copyright
             | Beerly 2015-2017. Todos los derechos reservados.
           img.brly-logo-footer src="../../common/assets/img/logo/logo-beerly-06.svg"
+      
+      .brly-bg-pop.display-none
 
-        
+      .brly-pop-wrapper.display-none
+        .brly-login-pop
+          h2.brly-register-h2 Ingresa o regístrate
+          p.brly-register-p al club de cervezas artesanales Beerly
+          button.brly-register-close type="button"
+            span.fa.fa-times
+          .flex-row
+            .flex-column
+              span.brly-form-span ¿Ya tienes cuenta? Ingresa acá
+              /!LOGIN FORM
+              form.brly-login-form
+                .flex-row.width-300p
+                  label.brly-label Email:
+                  input.brly-input type="email"
+                .flex-row.width-300p
+                  label.brly-label Contraseña:
+                  input.brly-input type="text"
+                .flex-column 
+                  button.brly-facebook-button type="button"
+                    span.fa.fa-facebook
+                    | Ingresar con facebook
+                  button.brly-register-button type="button" Ingresar
+                  a.brly-form-a href="#"
+                    span.fa.fa-question-circle
+                    | ¿Olvidaste tu contraseña? Haz click acá
+            .flex-column
+              span.brly-form-span ¿Eres nuevo? Empieza acá
+              /!LOGIN FORM
+              form.brly-register-form
+                .flex-row.width-300p
+                  label.brly-label Nombre:
+                  input.brly-input type="text"
+                .flex-row.width-300p
+                  label.brly-label Correo:
+                  input.brly-input  type="email"
+                .flex-row.width-300p
+                  label.brly-label Contraseña:
+                  input.brly-input.error type="password"
+                .flex-row.width-300p
+                  label.brly-label Repite contraseña:
+                  input.brly-input type="password"
+                .flex-column 
+                  /! COMMON CREATE BUTTON
+                  button.brly-register-button  Crear cuenta
+
+      .brly-pop-wrapper.display-none
+        .brly-buy-pop
+          h2.brly-register-h2 Plan frecuente
+          p.brly-register-p del club de cervezas artesanales Beerly
+          button.brly-register-close type="button"
+            span.fa.fa-times
+          .flex-column.flex-center.width-100
+            /!LOGIN FORM
+            form.brly-login-form.flex-column.flex-center
+              .flex-row.width-300p
+                label.brly-label Meses:
+                select.brly-select
+                  option 3
+                  option 6
+                  option 12
+              .flex-row.width-300p
+                label.brly-label Teléfono:
+                input.brly-input type="text"
+              .flex-row.width-300p data-balloon="Pablo chupalo" data-balloon-pos="right"
+                label.brly-label Calle:
+                input.brly-input.error type="text"
+              .flex-row.width-300p
+                label.brly-label Número:
+                input.brly-input type="text"
+              .flex-row.width-300p
+                label.brly-label
+                  | Of/Dpto
+                  br
+                  | Cómo llegar:
+                textarea.brly-textarea
+              .flex-row.width-300p
+                label.brly-label Comuna:
+                select.brly-select
+                  option Puente Alto
+                  option Santiago Centro
+                  option Las Condes
+              .flex-column
+                span.brly-form-span-2
+                  | Resumen de tu compra:
+                .flex-row
+                  span.brly-form-span-3
+                    | Valor mensual
+                    span.brly-form-price 
+                      | $00.000
+                  span.brly-form-span-3
+                    | Costo de envío
+                    span.brly-form-price 
+                      | $00.000
+                  span.brly-form-span-3
+                    | Precio total
+                    span.brly-form-price 
+                      | $00.000
+              .flex-row
+                img.webpay-oneclick src="../../common/assets/img/webpay_oc.png"
+                button.brly-register-button type="button" data-balloon="Pablo chupalo" data-balloon-pos="right" 
+                  | activar suscripción
+                button.brly-register-button.other type="button" cambiar medio de pago
+              .flex-row.text-center.width-100
+                a.brly-form-a.width-100 href="#" Al suscribirte aceptas los términos y condiciones
+
+      .brly-pop-wrapper.display-none
+        .brly-recovery-pop
+          h2.brly-register-h2 Recuperar contraseña
+          p.brly-register-p Si estás registrado ingresa tus correo y te la enviamos
+          button.brly-register-close type="button"
+            span.fa.fa-times
+          .flex-row
+            .flex-column
+              /!LOGIN FORM
+              form.brly-recovery-form
+                .flex-row.width-300p
+                  label.brly-label Correo:
+                  input.brly-input type="email"
+                .flex-column 
+                  button.brly-register-button type="button" recuperar
+                  .brly-form-a.highlight !La clave fue enviada a tu correo!
+                  .brly-form-a.highlight ¡El correo ingresado no figura en nuestros registros!
+
+      .brly-pop-wrapper.display-none
+        .brly-buy-pop-other
+          h2.brly-register-h2 Cambiar medio de pago
+          p.brly-register-p Membresía Beerly: Beerly Kit + Suscribeer
+          button.brly-register-close type="button"
+            span.fa.fa-times
+          .flex-row
+            .flex-column
+              /!LOGIN FORM
+              .flex-row.width-100.text-center
+              form.brly-oneclick-form
+                .flex-column.width-100.text-center
+                  .flex-row
+                    label.brly-label Meses:
+                    select.brly-select.width-100p
+                      option 3
+                      option 6
+                      option 9
+                  .flex-row.brly-selector-pay
+                    label.brly-label-radio
+                      input.brly-input-radio checked="" type="radio" name="pay-method" value="webpay-one-click"
+                      img.brly-radio-img src="../../common/assets/img/webpay_oc.png"
+                    label.brly-label-radio
+                      input.brly-input-radio type="radio" name="pay-method" value="webpay"
+                      img.brly-radio-img  src="../../common/assets/img/wp.png"
+                    label.brly-label-radio
+                      input.brly-input-radio type="radio" name="pay-method" value="transfer"
+                      img.brly-radio-img  src="../../common/assets/img/tb.png"
+
+                .flex-row
+                  button.brly-register-button.width-200p type="button" 
+                    | comienza ahora
+                  button.brly-register-button.other.width-200p type="button" volver
+
+      .brly-pop-wrapper.display-none
+        .brly-pop-faq
+          h2.brly-register-h2 Preguntas frecuentes
+          p.brly-register-p Resuelve tus dudas
+          button.brly-register-close type="button"
+            span.fa.fa-times
+          .flex-column.brly-ask-container
+            /! ASK 1
+            span.brly-form-note.width-100.text-center ¿Cuándo me llegará mi Kit Beerly?
+            span.brly-form-span.ask
+              | Depende en buena medida de tu fecha de inscripción y residencia. Los despachos tardan hasta 10 días hábiles para las principales ciudades del país (aunque suele ser menos), si no vives en ellas puedes consultar por nuestros canales de soporte, las cuales son meramente referenciales y están sujetas a cambios. Desde el momento en que tu kit abandona nuestras dependencias, figurará en tu sección Mi Cuenta -> Mis Pedidos el número de seguimiento para que puedas estar pendiente.
+            /! ASK 2
+            span.brly-form-note.width-100.text-center ¿Qué contiene el Kit Beerly?
+            span.brly-form-span.ask
+              | El Kit Beerly contiene 6 cervezas distintas de diversos estilos, para que puedas ir aprendiendo más de las cervezas con las práctica, una guia complementaria donde te recomendamos como probar tus cervezas para que puedas disfrutarlas al máximo y un regalo que suele ser un maridaje complementario y sorpresas que van variando mes a mes.
+            /! ASK 3
+            span.brly-form-note.width-100.text-center ¿Cuánto dura mi membresía?
+            span.brly-form-span.ask
+              | Serás miembro mientras mantengas una suscripción activa. Esta se renovará automáticamente cada mes si inscribes tu tarjeta de crédito. Si compraste con Redcompra o transferencia, dura 3, 6 o 12 meses, dependiendo de la suscripción por la que hayas optado.
+            /! ASK 4
+            span.brly-form-note.width-100.text-center ¿Puedo pagar sólo un mes de suscripción?
+            span.brly-form-span.ask
+              | Al inscribir tu membresía usando tu tarjeta de crdito por el sistema WebPay OneClick, te conviertes en un ciudadano Beerly hasta que tu decidas abandonarla, esto es, desde un mes o más.
+            /! ASK 5
+            span.brly-form-note.width-100.text-center ¿Cómo suspendo temporalmente mi membresía?
+            span.brly-form-span.ask
+              | Desde la sección Mi Cuenta -> Mis Datos puedes encontrar la opción "Congelar Membresía". Si optas por eso, no se te realizarán más cobros (ni enviareos mas kit) hasta que tú decidas reactivarla.
+            /! ASK 6
+            span.brly-form-note.width-100.text-center ¿Cómo cancelo mi membresía?
+            span.brly-form-span.ask
+              | Si deseas dar término a tu suscripción tienes que ingresar con tu cuenta al sitio, y en la sección superior derecha puedes hacer click para que salga un men desplegable, donde vas a "mis datos" y al final de tus pedidos realizados sale la opción "congelar membresía" o "eliminar tarjeta" y así tu membresía quedará suspendida. Este procedimiento es sólo válido si estás suscrito a través de la membresía recurrente con OneClick, las membresías por plazo fijo no son anulables.
+            /! ASK 7
+            span.brly-form-note.width-100.text-center ¿Soy productor de cerveza, fabrico vasos o artículos cerveceros, ¿con quien me contacto?
+            span.brly-form-span.ask
+              | Para cualquier tipo de servicio que quieras ofrecer, deja tu correo en jpabloconejeros@beerly.cl
+            /! ASK 8
+            span.brly-form-note.width-100.text-center ¿Ustedes hacen distribución de producto para restaurantes?
+            span.brly-form-span.ask
+              | Beerly es una plataforma que se dedica a la promoción de la cultura cervecera, buscando que este maravilloso producto sea más conocido por mas gente, por lo que Beerly no es una distribuidora, y por consecuencia, no se realizan ventas mayoristas.
+            /! ASK 9
+            span.brly-form-note.width-100.text-center ¿Con quien me contacto si mi pedido no llega/llegan botellas rotas/problemas en general con el despacho?
+            span.brly-form-span.ask
+              | Si tu pedido no llega en la fecha aproximada, te invitamos a queenvíes un correo a soporte@beerly.clpara poder solucionar este tema, del mismo modo si las botellas llegan rotas, te instamos a no aceptar el paquete y tomar una foto de la persona que te lo entregó junto a tu pedido para solucionarlo en conjunto con la compañía de despacho.
+            /! ASK 10
+            span.brly-form-note.width-100.text-center ¿Se puede regalar la membresía?
+            span.brly-form-span.ask
+              | Claro que si, ingresa a www.beerly.cl/giftcard y sigue las instrucciones. Al final del proceso de compra se te generará una gift card virtual que puedes regalar inmediatamente, la cual incluye un mensaje personalizado por ti.
+            /! ASK 11
+            span.brly-form-note.width-100.text-center ¿Puedo comprar con factura?
+            span.brly-form-span.ask
+              | Si, pero se aplican precios de venta corporativa. Para esto, contactar a jpabloconejeros@beerly.cl
+            /! ASK 12
+            span.brly-form-note.width-100.text-center ¿Pueden traer cervezas de sectores fuera de Chile?
+            span.brly-form-span.ask
+              | Beerly es un club de cerveza artesanal exclusivamente Chilena, por lo que trabajar con cervezas extranjeras está fuera del radar por el momento.
+            
+
+          
     javascript:
       $('#rotating').simplebanner();
 
