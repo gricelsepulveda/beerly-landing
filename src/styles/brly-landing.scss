@@ -49,6 +49,9 @@ h3.brly-promo-nav {
     color: $black;
     margin-right: 10px;
     margin-top: 4px;
+    @media #{$sm}{
+      display: none;
+    }
   }
   span.text-2 {
     font-weight: 300;
@@ -56,6 +59,9 @@ h3.brly-promo-nav {
     color: $black;
     margin-right: 10px;
     margin-top: 0px;
+    @media #{$sm}{
+      display: none;
+    }
   }
   span.text-3 {
     font-weight: 500;
@@ -63,6 +69,9 @@ h3.brly-promo-nav {
     color: $black;
     margin-right: 6px;
     margin-top: 4px;
+    @media #{$sm}{
+      font-size: 11px;
+    }
   }
   span.text-4 {
     font-weight: 800;
@@ -79,6 +88,9 @@ h3.brly-promo-nav {
     color: $color-2;
     margin-bottom: 2px;
     margin-top: 4px;
+    @media #{$sm}{
+      font-size: 14px;
+    }
   }
 }
 
@@ -97,19 +109,34 @@ nav.brly-top-nav {
   width: 100%;
   box-sizing: border-box;
   z-index: 3;
+  @media #{$sm}{
+    height: 70px;
+  }
   //LOGO BEERLY
   figure.brly-logo {
     height: 70px;
     width: auto;
+    @media #{$sm}{
+      height: 40px;
+    }
     .brly-logotipo {
       height: 70px;
       width: auto;
+      @media #{$sm}{
+        display: none;
+      }
     }
     .brly-isotipo{
       height: 40px;
       width: auto;
       margin-left: 10px;
       margin-bottom: 10px;
+      @media #{$sm}{
+        height: 20px;
+        position: fixed;
+        left: 5px;
+        top: 55px;
+      }
     }
   }
   //MAIN MENU
@@ -119,12 +146,25 @@ nav.brly-top-nav {
     @include brly-clean-webkit;
     @include brly-flex-row;
     justify-content: flex-start;
+    @media #{$sm}{
+      position: fixed;
+      left: 0px;
+      top: 80px;
+      width: 100%;
+      background-color: $black;
+      @include brly-flex-col;
+    }
     //MENU OPTIONS
     li.brly-li-menu {
       @include brly-clean-list;
       @include brly-cero;
       @include brly-clean-webkit;
       margin-right: 20px!important;
+      @media #{$sm}{
+        width: 100%;
+        height: 48px;
+        margin-right: 0!important;        
+      }
       a {
         @include brly-clean-ahref;
         display: inline-block;
@@ -145,6 +185,19 @@ nav.brly-top-nav {
         &:hover, &.active, &:focus {
           color: $color-1!important;
           margin-top: 20px;
+        }
+        @media #{$sm}{
+          width: 100%;
+          height: 100%;
+          margin-top: 0!important;
+          br {
+            display: none;
+          }
+          @include brly-flex-row;
+          border-bottom: 1px solid rgba($white, 0.25)
+;          &:hover, &.active, &:focus {
+            margin-top: 0!important;
+          }
         }
       }
     }
@@ -231,7 +284,7 @@ nav.brly-top-nav {
       right: 0px;
       top: 20px;
       background-color: $black;
-      border-radius: 0px 0px 4px 4px;
+      border-radius: 20px 0px 4px 4px;
       width: 100px;
       display: none!important;
       li.brly-logged-option-li {
@@ -300,6 +353,9 @@ nav.brly-top-nav {
     text: {
       align: center;
       transform: uppercase;
+    }
+    @media #{$sm}{
+      display: none;
     }
     &:hover, &:active, &:focus, &:visited {
       background: lighten($color-1, 10%);
@@ -870,6 +926,7 @@ section.brly-banner-animate {
   .bannerIndicators{
     position: absolute;
     right: calc(50% - 77px);
+    z-index: 2;
     .bannerIndicator {
       background-color: $color-1;
       color: $color-1;
@@ -1473,7 +1530,6 @@ span.brly-form-price-big {
 }
 
 //  INPUT RADIO
-/* INPUT RADIO*/
 
 .brly-selector-pay {
   margin-top: 10px;

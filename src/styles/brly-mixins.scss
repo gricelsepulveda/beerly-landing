@@ -10,7 +10,7 @@ $color-4: #e83d1b;
 
 //BREAKPOINTS
 $xs: "(max-width: 340px)";
-$sm: "(max-width: 767px)";
+$sm: "(max-width: 768px)";
 $md: "(max-width: 991px)";
 $lg: "(max-width: 1199px)";
 $xl: "(min-width: 1200px)";
@@ -1056,4 +1056,37 @@ $lg-abs: "(min-width: 992px) and (max-width: 1199px)";
 ::-webkit-scrollbar-thumb {
   background: $color-1;
   @include brly-animate;
+}
+
+// Z-INDEX AUX USEFUL CLASSES
+
+.brly-z-index-10{
+  z-index: 10!important;
+}
+.brly-z-index-20{
+  z-index: 20!important;
+}
+.brly-z-index-30{
+  z-index: 30!important;
+}
+.brly-z-index-40{
+  z-index: 40!important;
+}
+.brly-z-index-50{
+  z-index: 50!important;
+}
+.brly-z-index-60{
+  z-index: 60!important;
+}
+.brly-z-index-70{
+  z-index: 70!important;
+}
+.brly-z-index-80{
+  z-index: 80!important;
+}
+.brly-z-index-90{
+  z-index: 90!important;
+}
+.brly-z-index-100{
+  z-index: 100!important;
 }
